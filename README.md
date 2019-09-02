@@ -40,11 +40,21 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What is the purpose of using _sessions_?
 
+Session based authentication is one in which the user state is stored on the server’s memory. When using a session based auth system, the server creates and stores the session data in the server memory when the user logs in and then stores the session Id in a cookie on the user browser.
+The session Id is then sent on subsequent requests to the server and the server compares it with the stored session data and proceeds to process the requested action.
+
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+
+bcrypt hashes passwords so they aren't stored in plain text, the result of bcrypt achieves the three core properties of a secure password function as defined by its designers: It's preimage resistant.
 
 - [ ] What does bcrypt do to slow down attackers?
 
+bcrypt has a significant advantage over a simply salted SHA-256 hash: bcrypt uses a modified key setup algorithm which is timely quite expensive. This is called key strengthening, and makes a password more secure against brute force attacks, since the attacker now needs a lot more time to test each possible key.
+Also, you can hash multiple times (exponents of 2).
+
 - [ ] What are the three parts of the JSON Web Token?
+
+The header, payload, and signature
 
 ## Minimum Viable Product
 
